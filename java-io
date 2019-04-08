@@ -1,0 +1,23 @@
+import java.io. *;
+
+public class IOStreamEx {
+
+	public static void main(String[] args)throws Exception {
+		FileInputStream fis=new FileInputStream("C:\\Users\\14695\\IOStreamsEx\\mytext");
+		FileOutputStream fos=new FileOutputStream("C:\\Users\\14695\\IOStreamsEx\\Abc");
+		
+		int k;
+		
+		while((k=fis.read())!=-1){
+			fos.write(k);
+		}
+		
+		
+		fis.close();
+		fos.close();
+		
+		System.out.println("File is copies successfully");
+
+	}
+
+}
