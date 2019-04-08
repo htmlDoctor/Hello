@@ -1,0 +1,45 @@
+public class TryCatchEx {
+
+	public static void main(String[] args) {
+		
+	  try 
+	    {
+		  
+		  //ArithmeticException
+		int i=10;
+		int j=2;
+		int result=i/j;
+		
+		System.out.println("The result is "+result);
+		
+		//ArrayIndexOutOfBoundsException
+		int empId[]={101,102,103};
+		
+		System.out.println("the last empId is "+empId[7]);
+		
+		
+		String name=null;
+		
+		System.out.println("the length of the name is "+ name);
+	    }
+	  
+	    
+      catch(ArithmeticException e){
+    	System.out.println("you are trying to devide by zero not possible "+ e);
+       }
+	  
+	  catch(ArrayIndexOutOfBoundsException e){
+		  System.out.println("the array is out of range ");
+	  }
+	  catch(Exception e){
+		  
+		  System.out.println("Null point exception");
+		  
+	  }
+	  
+	  
+    
+	}
+
+  }
+
