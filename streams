@@ -1,0 +1,30 @@
+import java.io.*;
+public class SequenceInputSteams {
+
+	public static void main(String[] args)throws Exception {
+		// creating two files 
+		FileInputStream fis=new FileInputStream("C:\\Users\\14695\\IOStreamsEx\\mytext");
+		FileInputStream fis2=new FileInputStream("C:\\Users\\14695\\IOStreamsEx\\Abc");
+		
+		//putting all files togetter and read thenm as once 
+		SequenceInputStream sis= new SequenceInputStream(fis,fis2);
+		
+		FileOutputStream fos=new FileOutputStream("C:\\Users\\14695\\IOStreamsEx\\MergedFiles");
+		
+        int k;
+		
+		while((k=sis.read())!=-1){
+			fos.write(k);
+		}
+		
+		
+		fis.close();
+		fos.close();
+		
+		System.out.println("File is copies successfully");
+
+	}
+		
+
+	}
+
